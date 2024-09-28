@@ -48,7 +48,7 @@ export default function WhiteGreenRefinanceCalculator() {
         
         <Card className="bg-teal-50 mb-8 border-teal-200">
           <CardHeader>
-            <CardTitle className="text-2xl text-teal-700">Today's Interest Rate</CardTitle>
+            <CardTitle className="text-2xl text-teal-700">Today Interest Rate</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex items-center justify-between">
