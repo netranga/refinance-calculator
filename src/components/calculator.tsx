@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
-import { ArrowRight, TrendingUp, TrendingDown, DollarSign, Calendar } from 'lucide-react'
+import { ArrowRight, TrendingDown, DollarSign, Calendar } from 'lucide-react'
 
 export default function WhiteGreenRefinanceCalculator() {
   const [selectedProperty, setSelectedProperty] = useState<string | undefined>(undefined)
@@ -20,8 +20,8 @@ export default function WhiteGreenRefinanceCalculator() {
       loanAmount: 400000,
       loanTerm: 30
     },
-    'boyfriend-home': {
-      name: "Boyfriend's Home",
+    'tristan-home': {
+      name: "Tristan Home",
       currentRate: 3.75,
       currentPayment: 1620.83,
       newRate: 3.25,
@@ -31,7 +31,7 @@ export default function WhiteGreenRefinanceCalculator() {
     }
   }
 
-  type PropertyKey = 'my-home' | 'boyfriend-home'
+  type PropertyKey = 'my-home' | 'tristan-home'
   const selectedPropertyDetails = selectedProperty ? properties[selectedProperty as PropertyKey] : null
 
   const chartData = [
@@ -72,7 +72,7 @@ export default function WhiteGreenRefinanceCalculator() {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="my-home">My Home</SelectItem>
-              <SelectItem value="boyfriend-home">Boyfriend's Home</SelectItem>
+              <SelectItem value="tristan-home">Tristan Home</SelectItem>
             </SelectContent>
           </Select>
         </div>
